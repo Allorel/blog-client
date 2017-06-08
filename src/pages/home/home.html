@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  Welcome {{ username }} <br>
+
+  <ion-card *ngFor="let article of news.articles">
+    <img [src]="article.urlToImage"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ article.title }}
+        </ion-card-title>
+      <p>
+        {{ article.description }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
